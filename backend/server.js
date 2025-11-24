@@ -83,7 +83,13 @@ app.get("/", (req, res) => {
 	});
 });
 
-// POST /api/contact - Submit contact form
+const authRoutes = require("./routes/authRoutes");
+const { protect } = require("./middleware/authMiddleware");
+
+// Routes
+app.use("/api/auth", authRoutes);
+
+// POST /api/contact - Submit contact form (Public)
 app.post("/api/contact", async (req, res) => {
 	try {
 		console.log("📨 Received contact form submission:", req.body);
@@ -107,6 +113,7 @@ app.post("/api/contact", async (req, res) => {
 
 		// Save to database
 		const savedContact = await newContact.save();
+
 		console.log("✅ Contact saved to database:", savedContact._id);
 
 		// Send email notification
@@ -121,51 +128,43 @@ app.post("/api/contact", async (req, res) => {
 		const mailOptions = {
 			from: process.env.EMAIL_USER,
 			to: "beingpawanppp@gmail.com",
-			subject: `New Portfolio Contact from ${name}`,
-			text: `
-				Name: ${name}
-				Email: ${email}
-				Message: ${message}
-			`,
+			subject: `New Contact Form Submission from ${name}`,
 			html: `
-				<h3>New Contact Form Submission</h3>
-				<p><strong>Name:</strong> ${name}</p>
-				<p><strong>Email:</strong> ${email}</p>
-				<p><strong>Message:</strong></p>
-				<p>${message}</p>
-			`,
+        <h3>New Contact Message</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
 		};
 
-		await transporter.sendMail(mailOptions);
-		console.log("📧 Email notification sent successfully!");
+		try {
+			await transporter.sendMail(mailOptions);
+			console.log("📧 Email notification sent successfully!");
+		} catch (emailError) {
+			console.error("❌ Error sending email:", emailError);
+			// Don't fail the request if email fails, just log it
+		}
 
 		res.status(201).json({
 			success: true,
 			message: "Message sent successfully!",
-			data: {
-				id: savedContact._id,
-				name: savedContact.name,
-				createdAt: savedContact.createdAt,
-			},
+			data: savedContact,
 		});
 	} catch (error) {
-		console.error("❌ Error processing contact:", error);
+		console.error("❌ Error saving contact:", error);
 		res.status(500).json({
 			success: false,
-			error: "Failed to send message. Please try again later.",
+			error: "Server Error",
 		});
 	}
 });
 
-// GET /api/contacts - Get all contact messages (for admin)
-app.get("/api/contacts", async (req, res) => {
+// GET /api/contacts - Get all contacts (Protected)
+app.get("/api/contacts", protect, async (req, res) => {
 	try {
-		// Retrieve all contacts, newest first
-		const contacts = await Contact.find()
-			.sort({ createdAt: -1 })
-			.select("-__v"); // Exclude version field
-
-		res.json({
+		const contacts = await Contact.find().sort({ createdAt: -1 });
+		res.status(200).json({
 			success: true,
 			count: contacts.length,
 			data: contacts,
@@ -174,7 +173,7 @@ app.get("/api/contacts", async (req, res) => {
 		console.error("❌ Error fetching contacts:", error);
 		res.status(500).json({
 			success: false,
-			error: "Failed to fetch contacts",
+			error: "Server Error",
 		});
 	}
 });
@@ -205,7 +204,7 @@ app.get("/api/contacts/:id", async (req, res) => {
 });
 
 // DELETE /api/contacts/:id - Delete a contact message
-app.delete("/api/contacts/:id", async (req, res) => {
+app.delete("/api/contacts/:id", protect, async (req, res) => {
 	try {
 		const contact = await Contact.findByIdAndDelete(req.params.id);
 

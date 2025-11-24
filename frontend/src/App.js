@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
 import AppLayout from "./AppLayout";
+import Login from "./pages/Login";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
 
-function App() {
+function Portfolio() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("background");
 	const [formData, setFormData] = useState({
@@ -108,6 +113,27 @@ function App() {
 			theme={theme}
 			toggleTheme={toggleTheme}
 		/>
+	);
+}
+
+function App() {
+	return (
+		<AuthProvider>
+			<Router>
+				<Routes>
+					<Route path="/" element={<Portfolio />} />
+					<Route path="/login" element={<Login />} />
+					<Route
+						path="/admin"
+						element={
+							<ProtectedRoute>
+								<AdminDashboard />
+							</ProtectedRoute>
+						}
+					/>
+				</Routes>
+			</Router>
+		</AuthProvider>
 	);
 }
 
