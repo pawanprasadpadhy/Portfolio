@@ -579,7 +579,7 @@ This project is licensed under the MIT License - see below for details:
 ```
 MIT License
 
-Copyright (c) 2024 Pawan Prasad Padhy
+Copyright (c) 2025 Pawan Prasad Padhy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -606,10 +606,10 @@ SOFTWARE.
 
 **Pawan Prasad Padhy**
 
--   🌐 Portfolio: [https://yourportfolio.com](https://yourportfolio.com)
--   💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
--   🐱 GitHub: [github.com/yourusername](https://github.com/yourusername)
--   📧 Email: your.email@example.com
+-   🌐 Portfolio: [https://yourportfolio.com](https://yourportfolio.com) # TODO
+-   💼 LinkedIn: [linkedin.com/in/pawanprasadppp](https://linkedin.com/in/pawanprasadppp)
+-   🐱 GitHub: [github.com/pawanprasadpadhy](https://github.com/pawanprasadpadhy)
+-   📧 Email: beingpawanppp@gmail.com
 
 ---
 
@@ -625,10 +625,10 @@ SOFTWARE.
 
 ## 📊 Project Stats
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/pawan-portfolio?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/pawan-portfolio?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/pawan-portfolio?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/pawan-portfolio?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/pawanprasadpadhy/portfolio?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/pawanprasadpadhy/portfolio?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/pawanprasadpadhy/portfolio?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/pawanprasadpadhy/portfolio?style=flat-square)
 
 ---
 

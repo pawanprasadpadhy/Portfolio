@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 // Initialize Express app
@@ -106,8 +107,37 @@ app.post("/api/contact", async (req, res) => {
 
 		// Save to database
 		const savedContact = await newContact.save();
-
 		console.log("✅ Contact saved to database:", savedContact._id);
+
+		// Send email notification
+		const transporter = nodemailer.createTransport({
+			service: "gmail",
+			auth: {
+				user: process.env.EMAIL_USER,
+				pass: process.env.EMAIL_PASS,
+			},
+		});
+
+		const mailOptions = {
+			from: process.env.EMAIL_USER,
+			to: "beingpawanppp@gmail.com",
+			subject: `New Portfolio Contact from ${name}`,
+			text: `
+				Name: ${name}
+				Email: ${email}
+				Message: ${message}
+			`,
+			html: `
+				<h3>New Contact Form Submission</h3>
+				<p><strong>Name:</strong> ${name}</p>
+				<p><strong>Email:</strong> ${email}</p>
+				<p><strong>Message:</strong></p>
+				<p>${message}</p>
+			`,
+		};
+
+		await transporter.sendMail(mailOptions);
+		console.log("📧 Email notification sent successfully!");
 
 		res.status(201).json({
 			success: true,
@@ -119,7 +149,7 @@ app.post("/api/contact", async (req, res) => {
 			},
 		});
 	} catch (error) {
-		console.error("❌ Error saving contact:", error);
+		console.error("❌ Error processing contact:", error);
 		res.status(500).json({
 			success: false,
 			error: "Failed to send message. Please try again later.",

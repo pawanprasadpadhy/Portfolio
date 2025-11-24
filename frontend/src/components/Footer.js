@@ -101,6 +101,7 @@ function Footer({ scrollToSection }) {
 								href="https://www.scaler.com/"
 								target="_blank"
 								rel="noopener noreferrer"
+								// TODO - Add Scaler Profile Link + Scaler Icon
 								className="social-icon"
 								title="Scaler Profile"
 							>
