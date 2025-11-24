@@ -17,6 +17,8 @@ function AppLayout({
 	handleInputChange,
 	handleSubmit,
 	formStatus,
+	theme,
+	toggleTheme,
 }) {
 	return (
 		<div className="app">
@@ -25,6 +27,8 @@ function AppLayout({
 				setIsMenuOpen={setIsMenuOpen}
 				activeSection={activeSection}
 				scrollToSection={scrollToSection}
+				theme={theme}
+				toggleTheme={toggleTheme}
 			/>
 			<Hero scrollToSection={scrollToSection} />
 			<Background />

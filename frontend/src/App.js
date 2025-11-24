@@ -11,6 +11,17 @@ function App() {
 		message: "",
 	});
 	const [formStatus, setFormStatus] = useState(""); // '', 'sending', 'success', 'error'
+	const [theme, setTheme] = useState("dark");
+
+	// Toggle theme
+	const toggleTheme = () => {
+		setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+	};
+
+	// Apply theme to body
+	useEffect(() => {
+		document.body.setAttribute("data-theme", theme);
+	}, [theme]);
 
 	// Track active section based on scroll position
 	useEffect(() => {
@@ -94,6 +105,8 @@ function App() {
 			handleInputChange={handleInputChange}
 			handleSubmit={handleSubmit}
 			formStatus={formStatus}
+			theme={theme}
+			toggleTheme={toggleTheme}
 		/>
 	);
 }

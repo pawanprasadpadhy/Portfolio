@@ -1,7 +1,14 @@
 import React from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon } from "lucide-react";
 
-function Navbar({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) {
+function Navbar({
+	isMenuOpen,
+	setIsMenuOpen,
+	activeSection,
+	scrollToSection,
+	theme,
+	toggleTheme,
+}) {
 	return (
 		<nav className="navbar">
 			<div className="nav-container">
@@ -50,6 +57,20 @@ function Navbar({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) {
 						>
 							Resume <Download size={16} />
 						</a>
+
+						{/* Theme Toggle */}
+						<button
+							onClick={toggleTheme}
+							className="nav-link theme-toggle"
+							aria-label="Toggle theme"
+						>
+							{theme === "dark" ? (
+								<Sun size={20} />
+							) : (
+								<Moon size={20} />
+							)}
+						</button>
+
 						<div className="profile-icon">PP</div>
 					</div>
 
@@ -97,6 +118,23 @@ function Navbar({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) {
 					>
 						Resume
 					</a>
+					<button
+						onClick={() => {
+							toggleTheme();
+							setIsMenuOpen(false);
+						}}
+						className="mobile-nav-link theme-toggle-mobile"
+					>
+						{theme === "dark" ? (
+							<>
+								<Sun size={18} /> Light Mode
+							</>
+						) : (
+							<>
+								<Moon size={18} /> Dark Mode
+							</>
+						)}
+					</button>
 				</div>
 			)}
 		</nav>
