@@ -2,7 +2,18 @@ import React from "react";
 import { Linkedin, Github, Mail, BookOpen, Code } from "lucide-react";
 
 function Footer({ scrollToSection }) {
-	// TODO: Add actual social media links and DSA sheet URL
+	// Environment variables for social links
+	const CONNECT_EMAIL =
+		process.env.REACT_APP_CONNECT_EMAIL || "mailto:pawan@example.com";
+	const CONNECT_LINKEDIN =
+		process.env.REACT_APP_CONNECT_LINKEDIN || "https://linkedin.com";
+	const CONNECT_GITHUB =
+		process.env.REACT_APP_CONNECT_GITHUB || "https://github.com";
+	const CONNECT_SCALER =
+		process.env.REACT_APP_CONNECT_SCALER || "https://www.scaler.com/";
+	const DSA_SHEET_URL =
+		process.env.REACT_APP_DSA_SHEET_URL || "https://notion.so";
+
 	return (
 		<footer className="footer">
 			<div className="container">
@@ -60,7 +71,7 @@ function Footer({ scrollToSection }) {
 						<ul className="footer-links">
 							<li>
 								<a
-									href="https://notion.so"
+									href={DSA_SHEET_URL}
 									target="_blank"
 									rel="noopener noreferrer"
 									className="footer-link"
@@ -81,7 +92,7 @@ function Footer({ scrollToSection }) {
 						<h3 className="footer-title">Connect</h3>
 						<div className="social-links">
 							<a
-								href="https://linkedin.com"
+								href={CONNECT_LINKEDIN}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-icon"
@@ -89,7 +100,7 @@ function Footer({ scrollToSection }) {
 								<Linkedin size={20} />
 							</a>
 							<a
-								href="https://github.com"
+								href={CONNECT_GITHUB}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-icon"
@@ -97,19 +108,15 @@ function Footer({ scrollToSection }) {
 								<Github size={20} />
 							</a>
 							<a
-								href="https://www.scaler.com/"
+								href={CONNECT_SCALER}
 								target="_blank"
 								rel="noopener noreferrer"
-								// TODO - Add Scaler Profile Link + Scaler Icon
 								className="social-icon"
 								title="Scaler Profile"
 							>
 								<Code size={20} />
 							</a>
-							<a
-								href="mailto:pawan@example.com"
-								className="social-icon"
-							>
+							<a href={CONNECT_EMAIL} className="social-icon">
 								<Mail size={20} />
 							</a>
 						</div>
