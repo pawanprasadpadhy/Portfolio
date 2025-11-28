@@ -14,7 +14,6 @@ import {
 	SiDocker,
 	SiAmazonwebservices,
 	SiPostman,
-	// SiVisualstudio,
 	SiJira,
 } from "react-icons/si";
 
@@ -35,7 +34,6 @@ function Background() {
 		{ name: "Docker", Icon: SiDocker, color: "#2496ED" },
 		{ name: "AWS", Icon: SiAmazonwebservices, color: "#FF9900" },
 		{ name: "Postman", Icon: SiPostman, color: "#FF6C37" },
-		// { name: "VS Code", Icon: SiVisualstudio, color: "#007ACC" },
 		{ name: "Jira", Icon: SiJira, color: "#0052CC" },
 	];
 
@@ -43,25 +41,67 @@ function Background() {
 	const duplicatedSkills = [...allSkills, ...allSkills];
 
 	return (
-		<section id="background" className="section section-alt">
+		<section id="about" className="section section-alt">
 			<div className="container">
-				<h2 className="section-title">Background</h2>
+				<h2 className="section-title">About Me</h2>
 				<div className="card">
-					<p className="text-content">
-						I'm a passionate Full Stack Developer specializing in
-						the MERN stack (MongoDB, Express.js, React, Node.js).
-						With a strong foundation in both frontend and backend
-						technologies, I create scalable and efficient web
-						applications.
-					</p>
-					<p className="text-content">
-						My journey in web development started with a curiosity
-						about how things work on the internet. Over time, this
-						curiosity transformed into a professional career where
-						I've had the opportunity to work on diverse projects
-						ranging from e-commerce platforms to real-time data
-						applications.
-					</p>
+					<div className="about-content">
+						<p className="text-content about-intro">
+							I'm Pawan Prasad Padhy, a passionate Software
+							Developer Engineer with expertise in Full Stack
+							Development and a strong foundation in Python,
+							JavaScript, and modern web technologies. My
+							development experience centers around building
+							high-performance, scalable applications using the
+							MERN stack and Python frameworks.
+						</p>
+						<ul className="about-points">
+							<li className="about-point">
+								Developed <strong>'Rex'</strong>, a Python-based
+								playwright automation agent that streamlined
+								client document ordering from multiple external
+								portals, reducing processing time by 65%.
+							</li>
+							<li className="about-point">
+								Built <strong>'Agent AutoTag'</strong>, an
+								LLM-powered agent with MySQL backend that
+								auto-tags client-uploaded files, significantly
+								reducing Human-in-the-Loop efforts by 94%.
+							</li>
+							<li className="about-point">
+								Enhanced PostgreSQL database schemas
+								implementing indexing strategies that boosted
+								query performance by 40% and facilitated
+								efficient data archiving.
+							</li>
+							<li className="about-point">
+								Established monitoring solutions using Grafana,
+								DataDog, and Sentry to track automation pipeline
+								performance and system health across AI-driven
+								workflows.
+							</li>
+							<li className="about-point">
+								Created full-stack applications including a{" "}
+								<strong>Trello Clone</strong> with complete CRUD
+								operations, achieving 95% cross-browser
+								compatibility, and an{" "}
+								<strong>IMDB Clone</strong> using Django &
+								PostgreSQL that enhanced user engagement by 20%.
+							</li>
+							<li className="about-point">
+								Proficient in establishing CI/CD pipelines
+								through GitHub Actions and testing RESTful API
+								endpoints using Postman, reducing API-related
+								bugs by 35%.
+							</li>
+						</ul>
+						<p className="text-content about-outro">
+							Outside of coding, I enjoy exploring new
+							technologies, building automation tools, optimizing
+							database performance, and contributing to
+							open-source projects.
+						</p>
+					</div>
 
 					{/* Original Skills Grid */}
 					<div className="skills-grid">
@@ -91,9 +131,8 @@ function Background() {
 					<div className="skills-section">
 						<h3 className="skills-heading">My Skills</h3>
 						<p className="skills-quote">
-							"Programs must be written for people to read, and
-							only incidentally for machines to execute." — Harold
-							Abelson
+							"The best way to predict the future is to implement
+							it." — David Heinemeier Hansson
 						</p>
 
 						<div className="skills-slider-container">

@@ -19,14 +19,6 @@ function Navbar({
 					{/* Desktop Navigation */}
 					<div className="nav-links-desktop">
 						<button
-							onClick={() => scrollToSection("background")}
-							className={`nav-link ${
-								activeSection === "background" ? "active" : ""
-							}`}
-						>
-							Background
-						</button>
-						<button
 							onClick={() => scrollToSection("profile")}
 							className={`nav-link ${
 								activeSection === "profile" ? "active" : ""
@@ -41,6 +33,14 @@ function Navbar({
 							}`}
 						>
 							Experience
+						</button>
+						<button
+							onClick={() => scrollToSection("education")}
+							className={`nav-link ${
+								activeSection === "education" ? "active" : ""
+							}`}
+						>
+							Education
 						</button>
 						<button
 							onClick={() => scrollToSection("projects")}
@@ -88,12 +88,6 @@ function Navbar({
 			{isMenuOpen && (
 				<div className="nav-links-mobile">
 					<button
-						onClick={() => scrollToSection("background")}
-						className="mobile-nav-link"
-					>
-						Background
-					</button>
-					<button
 						onClick={() => scrollToSection("profile")}
 						className="mobile-nav-link"
 					>
@@ -106,16 +100,18 @@ function Navbar({
 						Experience
 					</button>
 					<button
+						onClick={() => scrollToSection("education")}
+						className="mobile-nav-link"
+					>
+						Education
+					</button>
+					<button
 						onClick={() => scrollToSection("projects")}
 						className="mobile-nav-link"
 					>
 						Projects
 					</button>
-					<a
-						href="/resume.pdf"
-						download
-						className="mobile-nav-link"
-					>
+					<a href="/resume.pdf" download className="mobile-nav-link">
 						Resume
 					</a>
 					<button

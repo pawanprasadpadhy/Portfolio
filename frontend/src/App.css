@@ -966,3 +966,222 @@ body {
   font-size: 1.25rem;
   margin-top: 3rem;
 }
+
+/* ======================
+   ABOUT ME SECTION
+   ====================== */
+.about-content {
+  padding: 1rem 0;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.about-point {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-point::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--text-accent);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.about-point strong {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.about-outro {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ======================
+   EDUCATION SECTION
+   ====================== */
+.section-intro {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  border-color: var(--text-accent);
+}
+
+.education-period {
+  flex-shrink: 0;
+  width: 180px;
+  font-weight: 600;
+  color: var(--text-accent);
+  font-size: 0.95rem;
+  padding-top: 0.25rem;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-institution {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.education-degree {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.education-details {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* ======================
+   EXPERIENCE SECTION (UPDATED)
+   ====================== */
+.experience-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  border-color: var(--text-accent);
+}
+
+.experience-period {
+  flex-shrink: 0;
+  width: 180px;
+  font-weight: 600;
+  color: var(--text-accent);
+  font-size: 0.95rem;
+  padding-top: 0.25rem;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-company {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.experience-role {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.experience-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-point {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.bullet-icon {
+  color: var(--text-accent);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Responsive styles for Education and Experience */
+@media (max-width: 768px) {
+
+  .education-card,
+  .experience-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .education-period,
+  .experience-period {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .about-point {
+    padding-left: 1.5rem;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { Linkedin, Github, Mail, BookOpen, Code } from "lucide-react";
 
 function Footer({ scrollToSection }) {
+	// TODO: Add actual social media links and DSA sheet URL
 	return (
 		<footer className="footer">
 			<div className="container">
@@ -19,16 +20,6 @@ function Footer({ scrollToSection }) {
 						<ul className="footer-links">
 							<li>
 								<button
-									onClick={() =>
-										scrollToSection("background")
-									}
-									className="footer-link"
-								>
-									Background
-								</button>
-							</li>
-							<li>
-								<button
 									onClick={() => scrollToSection("profile")}
 									className="footer-link"
 								>
@@ -43,6 +34,14 @@ function Footer({ scrollToSection }) {
 									className="footer-link"
 								>
 									Experience
+								</button>
+							</li>
+							<li>
+								<button
+									onClick={() => scrollToSection("education")}
+									className="footer-link"
+								>
+									Education
 								</button>
 							</li>
 							<li>
@@ -118,9 +117,7 @@ function Footer({ scrollToSection }) {
 				</div>
 
 				<div className="footer-bottom">
-					<p>
-						&copy; 2025 Pawan Prasad Padhy. All rights reserved.
-					</p>
+					<p>&copy; 2025 Pawan Prasad Padhy. All rights reserved.</p>
 					<p className="footer-built">
 						Built with React, Node.js, and passion for web
 						development.

@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Background from "./components/Background";
 import Profile from "./components/Profile";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -31,9 +31,9 @@ function AppLayout({
 				toggleTheme={toggleTheme}
 			/>
 			<Hero scrollToSection={scrollToSection} />
-			<Background />
 			<Profile />
 			<Experience />
+			<Education />
 			<Projects />
 			<Contact
 				formData={formData}

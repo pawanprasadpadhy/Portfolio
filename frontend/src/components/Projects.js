@@ -55,10 +55,17 @@ function Projects() {
 							tech: ["HTML5", "CSS3", "JavaScript"],
 						},
 						{
-							title: "Portfolio Website",
+							title: "Spotify Clone",
 							description:
-								"Personal portfolio website featuring a responsive design, dynamic content rendering, and a contact form.",
-							tech: ["React", "Node.js", "Express", "MongoDB"],
+								"Full-stack Spotify clone with music streaming capabilities, user authentication, and playlist management using Django and PostgreSQL.",
+							tech: [
+								"Django",
+								"Python",
+								"PostgreSQL",
+								"HTML5",
+								"Tailwind CSS",
+								"JavaScript",
+							],
 						},
 					].map((project, index) => (
 						<div key={index} className="project-card">

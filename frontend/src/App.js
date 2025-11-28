@@ -31,12 +31,7 @@ function Portfolio() {
 	// Track active section based on scroll position
 	useEffect(() => {
 		const handleScroll = () => {
-			const sections = [
-				"background",
-				"profile",
-				"experience",
-				"projects",
-			];
+			const sections = ["profile", "experience", "education", "projects"];
 			const current = sections.find((section) => {
 				const element = document.getElementById(section);
 				if (element) {
