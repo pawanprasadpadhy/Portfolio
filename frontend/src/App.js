@@ -17,21 +17,38 @@ function Portfolio() {
 	});
 	const [formStatus, setFormStatus] = useState(""); // '', 'sending', 'success', 'error'
 	const [theme, setTheme] = useState("dark");
+	const [colorTheme, setColorTheme] = useState(() => {
+		return localStorage.getItem("colorTheme") || "emerald";
+	});
 
 	// Toggle theme
 	const toggleTheme = () => {
 		setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
 	};
 
+	// Toggle color theme
+	const toggleColorTheme = () => {
+		const nextTheme = colorTheme === "emerald" ? "purple" : "emerald";
+		setColorTheme(nextTheme);
+		localStorage.setItem("colorTheme", nextTheme);
+	};
+
 	// Apply theme to body
 	useEffect(() => {
 		document.body.setAttribute("data-theme", theme);
-	}, [theme]);
+		document.body.setAttribute("data-color-theme", colorTheme);
+	}, [theme, colorTheme]);
 
 	// Track active section based on scroll position
 	useEffect(() => {
 		const handleScroll = () => {
-			const sections = ["profile", "experience", "education", "projects"];
+			const sections = [
+				"profile",
+				"experience",
+				"education",
+				"projects",
+				"contact",
+			];
 			const current = sections.find((section) => {
 				const element = document.getElementById(section);
 				if (element) {
@@ -107,6 +124,8 @@ function Portfolio() {
 			formStatus={formStatus}
 			theme={theme}
 			toggleTheme={toggleTheme}
+			colorTheme={colorTheme}
+			toggleColorTheme={toggleColorTheme}
 		/>
 	);
 }

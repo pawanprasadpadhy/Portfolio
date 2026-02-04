@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, X, Download, Sun, Moon } from "lucide-react";
+import { Menu, X, Download, Sun, Moon, Palette } from "lucide-react";
 
 function Navbar({
 	isMenuOpen,
@@ -8,6 +8,8 @@ function Navbar({
 	scrollToSection,
 	theme,
 	toggleTheme,
+	colorTheme,
+	toggleColorTheme,
 }) {
 	return (
 		<nav className="navbar">
@@ -58,11 +60,30 @@ function Navbar({
 							Resume <Download size={16} />
 						</a>
 
+						{/* Color Theme Toggle */}
+						<button
+							onClick={toggleColorTheme}
+							className="nav-link theme-toggle"
+							aria-label="Toggle color theme"
+							title={`Switch to ${
+								colorTheme === "emerald" ? "Purple" : "Emerald"
+							} theme`}
+						>
+							<Palette
+								size={20}
+								color={
+									colorTheme === "emerald"
+										? "#10B981"
+										: "#a855f7"
+								}
+							/>
+						</button>
+
 						{/* Theme Toggle */}
 						<button
 							onClick={toggleTheme}
 							className="nav-link theme-toggle"
-							aria-label="Toggle theme"
+							aria-label="Toggle light/dark mode"
 						>
 							{theme === "dark" ? (
 								<Sun size={20} />
@@ -114,6 +135,15 @@ function Navbar({
 					<a href="/resume.pdf" download className="mobile-nav-link">
 						Resume
 					</a>
+					<button
+						onClick={() => {
+							toggleColorTheme();
+							setIsMenuOpen(false);
+						}}
+						className="mobile-nav-link"
+					>
+						<Palette size={18} /> Switch Color Theme
+					</button>
 					<button
 						onClick={() => {
 							toggleTheme();

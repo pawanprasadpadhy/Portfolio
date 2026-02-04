@@ -7,14 +7,30 @@ function Hero({ scrollToSection }) {
 				{/* TODO Change the text headings and contents */}
 				<h1 className="hero-title">Welcome to My Portfolio</h1>
 				<p className="hero-subtitle">
-					Full Stack Developer | MERN Specialist
+					Building Scalable Web Apps with MERN & Cloud-Ready
+					Architectures
 				</p>
-				<button
-					onClick={() => scrollToSection("profile")}
-					className="cta-button"
-				>
-					Explore My Work
-				</button>
+				<div className="cta-button-group">
+					<button
+						onClick={() => scrollToSection("profile")}
+						className="cta-button cta-primary"
+					>
+						Explore My Work
+					</button>
+					<a
+						href="/resume.pdf"
+						download
+						className="cta-button cta-secondary"
+					>
+						Download Resume
+					</a>
+					<button
+						onClick={() => scrollToSection("contact")}
+						className="cta-button cta-secondary"
+					>
+						Contact Me
+					</button>
+				</div>
 			</div>
 		</section>
 	);

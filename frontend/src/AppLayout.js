@@ -19,6 +19,8 @@ function AppLayout({
 	formStatus,
 	theme,
 	toggleTheme,
+	colorTheme,
+	toggleColorTheme,
 }) {
 	return (
 		<div className="app">
@@ -29,6 +31,8 @@ function AppLayout({
 				scrollToSection={scrollToSection}
 				theme={theme}
 				toggleTheme={toggleTheme}
+				colorTheme={colorTheme}
+				toggleColorTheme={toggleColorTheme}
 			/>
 			<Hero scrollToSection={scrollToSection} />
 			<Profile />

@@ -3,7 +3,7 @@ import { Send } from "lucide-react";
 
 function Contact({ formData, handleInputChange, handleSubmit, formStatus }) {
 	return (
-		<section className="section section-alt">
+		<section id="contact" className="section section-alt">
 			<div className="container-small">
 				<h2 className="section-title">Have Queries? Contact Me</h2>
 				<p className="section-subtitle">
