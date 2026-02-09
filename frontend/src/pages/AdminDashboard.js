@@ -12,11 +12,14 @@ const AdminDashboard = () => {
 
 	const fetchContacts = async () => {
 		try {
-			const response = await fetch("http://localhost:5000/api/contacts", {
-				headers: {
-					Authorization: `Bearer ${user.token}`,
+			const response = await fetch(
+				"https://portfolio-r1bs.onrender.com/api/contacts",
+				{
+					headers: {
+						Authorization: `Bearer ${user.token}`,
+					},
 				},
-			});
+			);
 			const data = await response.json();
 			if (data.success) {
 				setContacts(data.data);
@@ -30,16 +33,18 @@ const AdminDashboard = () => {
 		if (window.confirm("Are you sure you want to delete this message?")) {
 			try {
 				const response = await fetch(
-					`http://localhost:5000/api/contacts/${id}`,
+					`https://portfolio-r1bs.onrender.com/api/contacts/${id}`,
 					{
 						method: "DELETE",
 						headers: {
 							Authorization: `Bearer ${user.token}`,
 						},
-					}
+					},
 				);
 				if (response.ok) {
-					setContacts(contacts.filter((contact) => contact._id !== id));
+					setContacts(
+						contacts.filter((contact) => contact._id !== id),
+					);
 				}
 			} catch (error) {
 				console.error("Error deleting contact:", error);
@@ -65,15 +70,21 @@ const AdminDashboard = () => {
 						contacts.map((contact) => (
 							<div key={contact._id} className="contact-card">
 								<div className="contact-header">
-									<h3 className="contact-name">{contact.name}</h3>
+									<h3 className="contact-name">
+										{contact.name}
+									</h3>
 									<span className="contact-date">
-										{new Date(contact.createdAt).toLocaleDateString()}
+										{new Date(
+											contact.createdAt,
+										).toLocaleDateString()}
 									</span>
 								</div>
 								<div className="contact-email">
 									<Mail size={16} /> {contact.email}
 								</div>
-								<p className="contact-message">{contact.message}</p>
+								<p className="contact-message">
+									{contact.message}
+								</p>
 								<button
 									onClick={() => handleDelete(contact._id)}
 									className="delete-button"
