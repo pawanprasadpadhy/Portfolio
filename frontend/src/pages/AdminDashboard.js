@@ -12,14 +12,12 @@ const AdminDashboard = () => {
 
 	const fetchContacts = async () => {
 		try {
-			const response = await fetch(
-				"https://portfolio-r1bs.onrender.com/api/contacts",
-				{
-					headers: {
-						Authorization: `Bearer ${user.token}`,
-					},
+			const API_URL = process.env.REACT_APP_API_URL;
+			const response = await fetch(`${API_URL}/api/contacts`, {
+				headers: {
+					Authorization: `Bearer ${user.token}`,
 				},
-			);
+			});
 			const data = await response.json();
 			if (data.success) {
 				setContacts(data.data);
@@ -32,15 +30,15 @@ const AdminDashboard = () => {
 	const handleDelete = async (id) => {
 		if (window.confirm("Are you sure you want to delete this message?")) {
 			try {
-				const response = await fetch(
-					`https://portfolio-r1bs.onrender.com/api/contacts/${id}`,
-					{
-						method: "DELETE",
-						headers: {
-							Authorization: `Bearer ${user.token}`,
-						},
+				const API_URL =
+					process.env.REACT_APP_API_URL ||
+					"https://portfolio-r1bs.onrender.com";
+				const response = await fetch(`${API_URL}/api/contacts/${id}`, {
+					method: "DELETE",
+					headers: {
+						Authorization: `Bearer ${user.token}`,
 					},
-				);
+				});
 				if (response.ok) {
 					setContacts(
 						contacts.filter((contact) => contact._id !== id),

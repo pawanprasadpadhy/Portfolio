@@ -87,16 +87,14 @@ function Portfolio() {
 		setFormStatus("sending");
 
 		try {
-			const response = await fetch(
-				"https://portfolio-r1bs.onrender.com/api/contact",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formData),
+			const API_URL = process.env.REACT_APP_API_URL;
+			const response = await fetch(`${API_URL}/api/contact`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
 				},
-			);
+				body: JSON.stringify(formData),
+			});
 
 			const data = await response.json();
 
