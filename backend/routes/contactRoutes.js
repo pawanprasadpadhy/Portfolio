@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Contact = require("../models/Contact");
+const sendEmail = require("../utils/sendEmail");
 
 // @desc    Submit contact form
 // @route   POST /api/contact
@@ -22,6 +23,32 @@ router.post("/", async (req, res) => {
 			name,
 			email,
 			message,
+		});
+
+		// Send email notification
+		const emailHtml = `
+			<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+				<h2 style="color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">
+					New Contact Form Submission
+				</h2>
+				<div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin: 20px 0;">
+					<p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
+					<p style="margin: 10px 0;"><strong>Email:</strong> ${email}</p>
+					<p style="margin: 10px 0;"><strong>Message:</strong></p>
+					<div style="background-color: white; padding: 15px; border-left: 4px solid #4CAF50; margin-top: 10px;">
+						${message}
+					</div>
+				</div>
+				<p style="color: #666; font-size: 12px; margin-top: 20px;">
+					This message was sent from your portfolio contact form.
+				</p>
+			</div>
+		`;
+
+		await sendEmail({
+			subject: `Portfolio Contact: Message from ${name}`,
+			html: emailHtml,
+			replyTo: email,
 		});
 
 		res.status(201).json({
