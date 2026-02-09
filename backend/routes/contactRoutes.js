@@ -25,7 +25,14 @@ router.post("/", async (req, res) => {
 			message,
 		});
 
-		// Send email notification
+		// Send response immediately
+		res.status(201).json({
+			success: true,
+			message: "Message sent successfully!",
+			data: contact,
+		});
+
+		// Send email notification in background (don't await)
 		const emailHtml = `
 			<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
 				<h2 style="color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">
@@ -45,17 +52,12 @@ router.post("/", async (req, res) => {
 			</div>
 		`;
 
-		await sendEmail({
+		// Send email without blocking (fire and forget)
+		sendEmail({
 			subject: `Portfolio Contact: Message from ${name}`,
 			html: emailHtml,
 			replyTo: email,
-		});
-
-		res.status(201).json({
-			success: true,
-			message: "Message sent successfully!",
-			data: contact,
-		});
+		}).catch((err) => console.error("Email error:", err));
 	} catch (error) {
 		console.error("Contact form error:", error);
 		res.status(500).json({
