@@ -12,9 +12,12 @@ const app = express();
 // CORS - Allows frontend to communicate with backend
 app.use(
 	cors({
-		origin: "http://localhost:3000", // Frontend URL
+		origin: [
+			"https://https://pawan-ppp-portfolio.netlify.app/",
+			"http://localhost:3000",
+		],
 		credentials: true,
-	})
+	}),
 );
 
 // Parse JSON data from requests
@@ -83,11 +86,14 @@ app.get("/", (req, res) => {
 	});
 });
 
-const authRoutes = require("./routes/authRoutes");
 const { protect } = require("./middleware/authMiddleware");
 
 // Routes
+const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
+
+const contactRoutes = require("./routes/contactRoutes");
+app.use("/api/contact", contactRoutes);
 
 // POST /api/contact - Submit contact form (Public)
 app.post("/api/contact", async (req, res) => {
