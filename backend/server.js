@@ -13,7 +13,7 @@ const app = express();
 app.use(
 	cors({
 		origin: [
-			"https://pawan-ppp-portfolio.netlify.app",
+			"https://pawanprasad-portfolio.netlify.app",
 			"http://localhost:3000",
 			"http://localhost:5173",
 		],
