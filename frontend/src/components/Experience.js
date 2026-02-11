@@ -1,6 +1,7 @@
 import React from "react";
 
 function Experience() {
+	// "Implemented student leaderboard feature with dynamic sorting logic supporting multiple filters including marks by subject, time taken, correct questions, and overall marks scored, enhancing competitive learning experience and performance tracking.",
 	const experiences = [
 		{
 			period: "Nov 2025 – Present",
@@ -9,7 +10,6 @@ function Experience() {
 			role: "Software Engineer",
 			points: [
 				"Automated exam state transition workflows and debugged test IDs stuck in various states, reducing manual intervention and improving exam delivery reliability for students.",
-				"Implemented student leaderboard feature with dynamic sorting logic supporting multiple filters including marks by subject, time taken, correct questions, and overall marks scored, enhancing competitive learning experience and performance tracking.",
 				"Managed multi-database infrastructure including MongoDB (EC2 and Atlas), ClickHouse for analytics, and S3 for storage, performing real-time data updates and optimizations to support exam operations.",
 				"Developed and maintained observability dashboards using Grafana and Superset to monitor exam state transitions, system performance metrics, and operational health across the testing platform.",
 				"Engineered exam creation pipeline by converting question paper PDFs to HTML content, importing paper codes, and managing question bank queries with subject-specific question ID mapping.",

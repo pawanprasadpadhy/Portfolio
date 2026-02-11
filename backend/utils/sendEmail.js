@@ -15,7 +15,7 @@ const sendEmail = async (options) => {
 
 		const emailData = {
 			from: `Portfolio Contact <onboarding@resend.dev>`, // Resend's verified sender
-			to: [process.env.EMAIL_USER || "beingpawanprasad@gmail.com"],
+			to: [process.env.EMAIL_USER || "beingpawanppp@gmail.com"],
 			reply_to: options.replyTo,
 			subject: options.subject,
 			html: options.html,
