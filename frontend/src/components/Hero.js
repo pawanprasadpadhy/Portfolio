@@ -18,7 +18,7 @@ function Hero({ scrollToSection }) {
 						Explore My Work
 					</button>
 					<a
-						href="/resume.pdf"
+						href="/resume_v1.pdf"
 						download
 						className="cta-button cta-secondary"
 					>

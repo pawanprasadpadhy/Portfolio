@@ -53,7 +53,7 @@ function Navbar({
 							Projects
 						</button>
 						<a
-							href="/resume.pdf"
+							href="/resume_v1.pdf"
 							download
 							className="nav-link resume-link"
 						>
@@ -132,7 +132,7 @@ function Navbar({
 					>
 						Projects
 					</button>
-					<a href="/resume.pdf" download className="mobile-nav-link">
+					<a href="/resume_v1.pdf" download className="mobile-nav-link">
 						Resume
 					</a>
 					<button
