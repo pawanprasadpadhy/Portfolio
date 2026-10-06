@@ -6,8 +6,11 @@ function Education() {
 			period: "Nov 2022 – May 2024",
 			institution: "Scaler",
 			degree: "Specialized in Software Development & Problem Solving",
-			details:
-				"Coursework: Python Programming, Data Structures & Algorithm, SQL, FullStack Development",
+			details: [
+				"Coursework: Python Programming, Data Structures & Algorithm, SQL, FullStack Development.",
+				"Engineering Practices: Software Design & Documentation, Testing & Debugging, Cross-Functional Collaboration, Version Control (Git), Code Reviews, Mult-Platform Support (Linux/Unix, AWS, distributed databases).",
+				"Sustained a 980+ day consistent DSA and coding practice streak, reflecting a strong commitment to continuous learning and skill enhancement along with problem-solving discipline and command over code CS fundamentals.",
+			],
 		},
 		{
 			period: "August 2015 – April 2019",

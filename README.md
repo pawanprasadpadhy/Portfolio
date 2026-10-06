@@ -10,12 +10,12 @@ A modern, responsive full-stack portfolio website built with the MERN stack (Mon
 
 ## 📋 Table of Contents
 
--   [Features](#-features)
--   [Tech Stack](#-tech-stack)
--   [Project Structure](#-project-structure)
--   [API Endpoints](#-api-endpoints)
--   [License](#-license)
--   [Contact](#-contact)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [API Endpoints](#-api-endpoints)
+- [License](#-license)
+- [Contact](#-contact)
 
 ---
 
@@ -23,30 +23,30 @@ A modern, responsive full-stack portfolio website built with the MERN stack (Mon
 
 ### Frontend Features
 
--   🎨 **Modern UI/UX** - Beautiful gradient design with smooth animations
--   📱 **Fully Responsive** - Works perfectly on desktop, tablet, and mobile
--   🧭 **Smooth Navigation** - Active section highlighting with smooth scroll
--   🌙 **Dark/Light Mode** - Toggle between dark and light themes
--   💼 **Portfolio Sections**:
-    -   Hero section with call-to-action
-    -   Background & skills showcase
-    -   Professional profile
-    -   Experience timeline
-    -   Projects grid with hover effects
-    -   Contact form with validation
-    -   Footer with social links
--   🔐 **Admin Dashboard** - Secure area to view and manage contact messages
--   🔄 **Dynamic Content** - Easy to update and customize
--   ⚡ **Fast Loading** - Optimized for performance
+- 🎨 **Modern UI/UX** - Beautiful gradient design with smooth animations
+- 📱 **Fully Responsive** - Works perfectly on desktop, tablet, and mobile
+- 🧭 **Smooth Navigation** - Active section highlighting with smooth scroll
+- 🌙 **Dark/Light Mode** - Toggle between dark and light themes
+- 💼 **Portfolio Sections**:
+    - Hero section with call-to-action
+    - Background & skills showcase
+    - Professional profile
+    - Experience timeline
+    - Projects grid with hover effects
+    - Contact form with validation
+    - Footer with social links
+- 🔐 **Admin Dashboard** - Secure area to view and manage contact messages
+- 🔄 **Dynamic Content** - Easy to update and customize
+- ⚡ **Fast Loading** - Optimized for performance
 
 ### Backend Features
 
--   🗄️ **MongoDB Integration** - Persistent data storage
--   🔐 **Authentication** - JWT-based auth for admin access
--   📧 **Email Notifications** - Instant email alerts for new contact submissions
--   🛡️ **CORS Enabled** - Secure cross-origin resource sharing
--   📊 **RESTful API** - Clean and organized API endpoints
--   🚀 **Scalable Architecture** - Easy to extend and maintain
+- 🗄️ **MongoDB Integration** - Persistent data storage
+- 🔐 **Authentication** - JWT-based auth for admin access
+- 📧 **Email Notifications** - Instant email alerts for new contact submissions
+- 🛡️ **CORS Enabled** - Secure cross-origin resource sharing
+- 📊 **RESTful API** - Clean and organized API endpoints
+- 🚀 **Scalable Architecture** - Easy to extend and maintain
 
 ---
 
@@ -54,21 +54,21 @@ A modern, responsive full-stack portfolio website built with the MERN stack (Mon
 
 ### Frontend
 
--   **React** 18.2.0 - UI library
--   **Lucide React** - Modern icon library
--   **CSS3** - Custom styling with animations
--   **JavaScript (ES6+)** - Modern JavaScript features
--   **React Router** - Client-side routing
+- **React** 18.2.0 - UI library
+- **Lucide React** - Modern icon library
+- **CSS3** - Custom styling with animations
+- **JavaScript (ES6+)** - Modern JavaScript features
+- **React Router** - Client-side routing
 
 ### Backend
 
--   **Node.js** - Runtime environment
--   **Express.js** 4.18.2 - Web framework
--   **MongoDB** - NoSQL database
--   **Mongoose** 7.0.0 - MongoDB object modeling
--   **Nodemailer** - Email sending service
--   **JWT** - JSON Web Tokens for authentication
--   **Bcryptjs** - Password hashing
+- **Node.js** - Runtime environment
+- **Express.js** 4.18.2 - Web framework
+- **MongoDB** - NoSQL database
+- **Mongoose** 7.0.0 - MongoDB object modeling
+- **Nodemailer** - Email sending service
+- **JWT** - JSON Web Tokens for authentication
+- **Bcryptjs** - Password hashing
 
 ---
 
@@ -111,14 +111,14 @@ http://localhost:5000
 
 #### 1. Public Endpoints
 
--   `GET /` - Health check
--   `POST /api/contact` - Submit contact form (sends email notification)
--   `POST /api/auth/login` - Admin login
+- `GET /` - Health check
+- `POST /api/contact` - Submit contact form (sends email notification)
+- `POST /api/auth/login` - Admin login
 
 #### 2. Protected Endpoints (Admin Only)
 
--   `GET /api/contacts` - Get all contact messages
--   `DELETE /api/contacts/:id` - Delete a contact message
+- `GET /api/contacts` - Get all contact messages
+- `DELETE /api/contacts/:id` - Delete a contact message
 
 ---
 
@@ -156,20 +156,20 @@ SOFTWARE.
 
 **Pawan Prasad Padhy**
 
--   🌐 Portfolio: [https://yourportfolio.com](https://yourportfolio.com) # TODO
--   💼 LinkedIn: [linkedin.com/in/pawanprasadppp](https://linkedin.com/in/pawanprasadppp)
--   🐱 GitHub: [github.com/pawanprasadpadhy](https://github.com/pawanprasadpadhy)
--   📧 Email: beingpawanppp@gmail.com
+- 🌐 Portfolio: [Portfolio](https://pawanprasad-portfolio.netlify.app)
+- 💼 LinkedIn: [LinkedIn](https://linkedin.com/in/pawanprasadpadhy)
+- 🐱 GitHub: [GitHub](https://github.com/pawanprasadpadhy)
+- 📧 Email: beingpawanppp@gmail.com
 
 ---
 
 ## 🙏 Acknowledgments
 
--   [React](https://reactjs.org/) - Amazing UI library
--   [Node.js](https://nodejs.org/) - Powerful runtime
--   [MongoDB](https://www.mongodb.com/) - Flexible database
--   [Express.js](https://expressjs.com/) - Fast web framework
--   [Lucide Icons](https://lucide.dev/) - Beautiful icon set
+- [React](https://reactjs.org/) - Amazing UI library
+- [Node.js](https://nodejs.org/) - Powerful runtime
+- [MongoDB](https://www.mongodb.com/) - Flexible database
+- [Express.js](https://expressjs.com/) - Fast web framework
+- [Lucide Icons](https://lucide.dev/) - Beautiful icon set
 
 ---
 
@@ -184,10 +184,10 @@ SOFTWARE.
 
 ## 🚀 Future Enhancements
 
--   [ ] Analytics integration
--   [ ] SEO optimization
--   [ ] PWA support
--   [ ] Interactive animations
+- [ ] Analytics integration
+- [ ] SEO optimization
+- [ ] PWA support
+- [ ] Interactive animations
 
 ---
 

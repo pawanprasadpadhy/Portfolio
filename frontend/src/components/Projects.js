@@ -8,7 +8,7 @@ function Projects() {
 				<div className="projects-grid">
 					{[
 						{
-							title: "BookMyShow Clone",
+							title: "BookMyShow Clone *",
 							description:
 								"Created a clone of BookMyShow using HTML5, CSS3, and Vanilla JavaScript.",
 							tech: [
@@ -30,7 +30,7 @@ function Projects() {
 							],
 						},
 						{
-							title: "IMDB Clone",
+							title: "IMDB Clone *",
 							description:
 								"Comprehensive full-stack IMDB clone using Django and PostgreSQL, integrating IMDB API for real-time trending movies.",
 							tech: [
@@ -55,7 +55,7 @@ function Projects() {
 							tech: ["HTML5", "CSS3", "JavaScript"],
 						},
 						{
-							title: "Spotify Clone",
+							title: "Spotify Clone *",
 							description:
 								"Full-stack Spotify clone with music streaming capabilities, user authentication, and playlist management using Django and PostgreSQL.",
 							tech: [
@@ -66,6 +66,12 @@ function Projects() {
 								"Tailwind CSS",
 								"JavaScript",
 							],
+						},
+						{
+							title: "Image Classification Model - Transfer Learning Pipeline *",
+							description:
+								"Full-stack Spotify clone with music streaming capabilities, user authentication, and playlist management using Django and PostgreSQL.",
+							tech: ["TensorFlow", "Keras", "Python", "OpenCV"],
 						},
 					].map((project, index) => (
 						<div key={index} className="project-card">
