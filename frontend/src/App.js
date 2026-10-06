@@ -46,6 +46,7 @@ function Portfolio() {
 				"profile",
 				"experience",
 				"education",
+				"certifications",
 				"projects",
 				"contact",
 			];

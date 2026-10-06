@@ -45,6 +45,16 @@ function Navbar({
 							Education
 						</button>
 						<button
+							onClick={() => scrollToSection("certifications")}
+							className={`nav-link ${
+								activeSection === "certifications"
+									? "active"
+									: ""
+							}`}
+						>
+							Certifications
+						</button>
+						<button
 							onClick={() => scrollToSection("projects")}
 							className={`nav-link ${
 								activeSection === "projects" ? "active" : ""
@@ -127,12 +137,22 @@ function Navbar({
 						Education
 					</button>
 					<button
+						onClick={() => scrollToSection("certifications")}
+						className="mobile-nav-link"
+					>
+						Certifications
+					</button>
+					<button
 						onClick={() => scrollToSection("projects")}
 						className="mobile-nav-link"
 					>
 						Projects
 					</button>
-					<a href="/resume_v1.pdf" download className="mobile-nav-link">
+					<a
+						href="/resume_v1.pdf"
+						download
+						className="mobile-nav-link"
+					>
 						Resume
 					</a>
 					<button

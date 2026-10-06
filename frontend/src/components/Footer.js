@@ -57,6 +57,16 @@ function Footer({ scrollToSection }) {
 							</li>
 							<li>
 								<button
+									onClick={() =>
+										scrollToSection("certifications")
+									}
+									className="footer-link"
+								>
+									Certifications
+								</button>
+							</li>
+							<li>
+								<button
 									onClick={() => scrollToSection("projects")}
 									className="footer-link"
 								>

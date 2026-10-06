@@ -1161,6 +1161,23 @@ body {
   margin-top: 0.5rem;
 }
 
+.certification-card {
+  align-items: center;
+}
+
+.certification-issuer {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+}
+
+.certification-logo {
+  width: 52px;
+  height: 52px;
+  color: #ff9900;
+  flex-shrink: 0;
+}
+
 /* ======================
    EXPERIENCE SECTION (UPDATED)
    ====================== */
@@ -1244,6 +1261,10 @@ body {
     width: 100%;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-color);
+  }
+
+  .certification-issuer {
+    padding-bottom: 0.75rem;
   }
 
   .about-point {
