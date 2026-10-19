@@ -1,8 +1,13 @@
 import React from "react";
 import { FaAws } from "react-icons/fa";
+import upgradLogo from "../assets/upgrad-logo.svg";
 
 const issuerLogos = {
 	AWS: FaAws,
+};
+
+const issuerLogoImages = {
+	upGrad: upgradLogo,
 };
 
 function Certifications() {
@@ -16,8 +21,12 @@ function Certifications() {
 			issuer: "AWS",
 		},
 		{
-			name: "Fundamentals of Analytics",
+			name: "Fundamentals of Data Analytics",
 			issuer: "AWS",
+		},
+		{
+			name: "Tableau Basics",
+			issuer: "upGrad",
 		},
 	];
 
@@ -32,6 +41,7 @@ function Certifications() {
 				<div className="education-list">
 					{certifications.map((cert, index) => {
 						const IssuerLogo = issuerLogos[cert.issuer];
+						const issuerLogoImage = issuerLogoImages[cert.issuer];
 						return (
 							<div
 								key={index}
@@ -43,6 +53,13 @@ function Certifications() {
 											className="certification-logo"
 											title={cert.issuer}
 											aria-label={cert.issuer}
+										/>
+									) : issuerLogoImage ? (
+										<img
+											src={issuerLogoImage}
+											className="certification-logo certification-logo-img"
+											alt={cert.issuer}
+											title={cert.issuer}
 										/>
 									) : (
 										cert.issuer

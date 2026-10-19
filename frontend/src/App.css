@@ -272,23 +272,164 @@ body {
    HERO SECTION
    ====================== */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding-top: 8rem;
   padding-bottom: 5rem;
   text-align: center;
 }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--text-primary);
+/* Soft accent glow behind the hero content, follows the colour theme */
+.hero-glow {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  width: min(900px, 120vw);
+  height: 520px;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(closest-side at 35% 45%, var(--accent-glow), transparent),
+    radial-gradient(closest-side at 70% 55%, var(--button-shadow), transparent);
+  opacity: 0.45;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
   margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease-in;
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.hero-badge-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 0 0 var(--accent-glow);
+  animation: heroPulse 2s ease-out infinite;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.hero-name {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  max-width: 40rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.hero-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.hero-tag {
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
   color: var(--text-accent);
-  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 56rem;
+  margin-top: 3.5rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+}
+
+.hero-stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+@keyframes heroPulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+
+  70% {
+    box-shadow: 0 0 0 0.6rem transparent;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-inner,
+  .hero-badge-dot {
+    animation: none;
+  }
 }
 
 .cta-button {
@@ -360,11 +501,11 @@ body {
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .hero-subtitle {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1176,6 +1317,13 @@ body {
   height: 52px;
   color: #ff9900;
   flex-shrink: 0;
+}
+
+/* Wordmark logos (e.g. upGrad) are wide, so size by height instead */
+.certification-logo-img {
+  width: auto;
+  height: 22px;
+  max-width: 100%;
 }
 
 /* ======================
