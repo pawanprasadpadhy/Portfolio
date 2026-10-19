@@ -1,5 +1,6 @@
 import React from "react";
 import { Menu, X, Download, Sun, Moon, Palette } from "lucide-react";
+import { trackResumeDownload } from "../utils/trackResumeDownload";
 
 function Navbar({
 	isMenuOpen,
@@ -65,6 +66,7 @@ function Navbar({
 						<a
 							href="/pawan_resume.pdf"
 							download
+							onClick={() => trackResumeDownload("navbar")}
 							className="nav-link resume-link"
 						>
 							Resume <Download size={16} />
@@ -151,6 +153,7 @@ function Navbar({
 					<a
 						href="/pawan_resume.pdf"
 						download
+						onClick={() => trackResumeDownload("mobile-menu")}
 						className="mobile-nav-link"
 					>
 						Resume
