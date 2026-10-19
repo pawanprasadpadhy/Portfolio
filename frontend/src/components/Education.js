@@ -17,7 +17,11 @@ function Education() {
 			institution:
 				"National Institute of Science & Technology, Berhampur, Odisha",
 			degree: "Bachelor of Technology (B.Tech) in Civil Engineering",
-			details: [],
+			details: [
+				"Grade: 8.03/10.",
+				"Certified summer courses in AutoCAD and STAAD.Pro for structural drafting, analysis and design.",
+				"Internship: Vocational training at Indian Rare Earths Limited (I.R.E.L.), Ganjam, Odisha.",
+			],
 		},
 	];
 
