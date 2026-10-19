@@ -8,7 +8,7 @@ function Projects() {
 				<div className="projects-grid">
 					{[
 						{
-							title: "Olist E-Commerce Analytics",
+							title: "E-Commerce Analytics",
 							description:
 								"End-to-end analytics on about 100k Olist marketplace orders, from Python cleaning and SQLite modelling to SQL analysis, RFM segmentation, and Tableau and Power BI dashboards.",
 							tech: [
