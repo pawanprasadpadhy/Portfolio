@@ -1,4 +1,5 @@
 import React from "react";
+import { trackResumeDownload } from "../utils/trackResumeDownload";
 
 const heroStats = [
 	{ value: "4 yrs", label: "Experience across software & civil engineering" },
@@ -40,8 +41,9 @@ function Hero({ scrollToSection }) {
 						Explore My Work
 					</button>
 					<a
-						href="/resume_v1.pdf"
+						href="/pawan_resume.pdf"
 						download
+						onClick={() => trackResumeDownload("hero")}
 						className="cta-button cta-secondary"
 					>
 						Download Resume

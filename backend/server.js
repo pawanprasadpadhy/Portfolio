@@ -98,6 +98,9 @@ app.use("/api/auth", authRoutes);
 const contactRoutes = require("./routes/contactRoutes");
 app.use("/api/contact", contactRoutes);
 
+const trackRoutes = require("./routes/trackRoutes");
+app.use("/api/track", trackRoutes);
+
 // POST /api/contact - Submit contact form (Public)
 app.post("/api/contact", async (req, res) => {
 	try {
