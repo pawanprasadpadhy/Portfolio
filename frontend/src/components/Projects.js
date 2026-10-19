@@ -73,6 +73,19 @@ function Projects() {
 								"Full-stack Spotify clone with music streaming capabilities, user authentication, and playlist management using Django and PostgreSQL.",
 							tech: ["TensorFlow", "Keras", "Python", "OpenCV"],
 						},
+						{
+							title: "Olist E-Commerce Analytics",
+							description:
+								"End-to-end analytics on about 100k Olist marketplace orders, from Python cleaning and SQLite modelling to SQL analysis, RFM segmentation, and Tableau and Power BI dashboards.",
+							tech: [
+								"Python",
+								"Pandas",
+								"SQL",
+								"SQLite",
+								"Tableau",
+								"Power BI",
+							],
+						},
 					].map((project, index) => (
 						<div key={index} className="project-card">
 							<h3 className="project-title">{project.title}</h3>
