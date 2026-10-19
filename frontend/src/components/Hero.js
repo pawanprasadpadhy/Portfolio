@@ -1,13 +1,13 @@
 import React from "react";
 
 const heroStats = [
-	{ value: "2 yrs", label: "Professional experience" },
-	{ value: "94%", label: "Less manual tagging with AutoTag" },
-	{ value: "65%", label: "Faster document ordering with Rex" },
+	{ value: "4 yrs", label: "Experience across software & civil engineering" },
+	{ value: "20+", label: "Concurrent bot generations in Python asyncio" },
+	{ value: "3", label: "Production data stores: MongoDB, ClickHouse, S3" },
 	{ value: "1000+", label: "Day DSA & coding streak" },
 ];
 
-const focusAreas = ["Python", "AWS", "Data Pipelines", "Observability", "Analytics"];
+const focusAreas = ["Python", "Go", "AWS", "Data Pipelines", "Observability", "Analytics"];
 
 function Hero({ scrollToSection }) {
 	return (
