@@ -8,31 +8,54 @@ function Projects() {
 				<div className="projects-grid">
 					{[
 						{
-							title: "BookMyShow Clone *",
+							title: "Olist E-Commerce Analytics",
 							description:
-								"Created a clone of BookMyShow using HTML5, CSS3, and Vanilla JavaScript.",
+								"End-to-end analytics on about 100k Olist marketplace orders, from Python cleaning and SQLite modelling to SQL analysis, RFM segmentation, and Tableau and Power BI dashboards.",
 							tech: [
-								"HTML5",
-								"CSS3",
-								"Vanilla JavaScript",
-								"Trello REST API",
+								"Python",
+								"Pandas",
+								"SQL",
+								"SQLite",
+								"Tableau",
+								"Power BI",
 							],
 						},
 						{
-							title: "Trello Clone Application",
+							title: "Portfolio Website",
 							description:
-								"Fully functional Trello clone supporting complete CRUD operations for boards, lists, cards and checklists.",
+								"Full-stack portfolio built on the MERN stack, with a responsive React frontend, dynamic routing, and RESTful Express.js APIs backed by MongoDB for contact form submissions and content management.",
 							tech: [
-								"HTML5",
-								"CSS3",
-								"Vanilla JavaScript",
-								"Trello REST API",
+								"React.js",
+								"Node.js",
+								"Express.js",
+								"MongoDB",
+								"JavaScript",
+								"REST APIs",
 							],
+						},
+						{
+							title: "Resume Creator",
+							description:
+								"Markdown-based resume editor with a live preview and one-click ATS-friendly PDF export, using a shared markdown parser on client and server so the preview stays in sync with the generated PDF.",
+							tech: [
+								"React",
+								"Vite",
+								"Flask",
+								"ReportLab",
+								"Python",
+								"Markdown",
+							],
+						},
+						{
+							title: "Image Classification Model - Transfer Learning Pipeline *",
+							description:
+								"Image classification model using TensorFlow/Keras (MobileNetV2) on a ~17K-image, 6-class dataset (Intel Image Classification), experimenting with augmentation strategies and training configurations to improve generalization.",
+							tech: ["TensorFlow", "Keras", "Python", "OpenCV"],
 						},
 						{
 							title: "IMDB Clone *",
 							description:
-								"Comprehensive full-stack IMDB clone using Django and PostgreSQL, integrating IMDB API for real-time trending movies.",
+								"Full-stack IMDB clone using Django and PostgreSQL, integrating the TMDB API for real-time trending movies, with genre-based filtering, pagination and a normalized, indexed database schema.",
 							tech: [
 								"Django",
 								"Python",
@@ -43,16 +66,15 @@ function Projects() {
 							],
 						},
 						{
-							title: "To-Do List App",
+							title: "Trello Clone Application",
 							description:
-								"Interactive task management application with complete CRUD functionality and drag-and-drop reordering.",
-							tech: ["HTML5", "CSS3", "Vanilla JavaScript"],
-						},
-						{
-							title: "Kanban Board App",
-							description:
-								"Task creation and management functionality with color-coded priority levels and local storage persistence.",
-							tech: ["HTML5", "CSS3", "JavaScript"],
+								"Trello clone supporting full CRUD operations across boards, lists, cards and checklists, built with a modular JavaScript architecture and no frontend framework.",
+							tech: [
+								"HTML5",
+								"CSS3",
+								"Vanilla JavaScript",
+								"Trello REST API",
+							],
 						},
 						{
 							title: "Spotify Clone *",
@@ -68,10 +90,22 @@ function Projects() {
 							],
 						},
 						{
-							title: "Image Classification Model - Transfer Learning Pipeline *",
+							title: "BookMyShow Clone *",
 							description:
-								"Full-stack Spotify clone with music streaming capabilities, user authentication, and playlist management using Django and PostgreSQL.",
-							tech: ["TensorFlow", "Keras", "Python", "OpenCV"],
+								"Created a clone of BookMyShow using HTML5, CSS3, and Vanilla JavaScript.",
+							tech: ["HTML5", "CSS3", "Vanilla JavaScript"],
+						},
+						{
+							title: "To-Do List App",
+							description:
+								"Interactive task management application with complete CRUD functionality and drag-and-drop reordering.",
+							tech: ["HTML5", "CSS3", "Vanilla JavaScript"],
+						},
+						{
+							title: "Kanban Board App",
+							description:
+								"Task creation and management functionality with color-coded priority levels and local storage persistence.",
+							tech: ["HTML5", "CSS3", "JavaScript"],
 						},
 					].map((project, index) => (
 						<div key={index} className="project-card">

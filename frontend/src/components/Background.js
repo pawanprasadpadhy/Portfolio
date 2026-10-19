@@ -3,7 +3,7 @@ import {
 	SiJavascript,
 	SiReact,
 	SiHtml5,
-	SiCss3,
+	SiCss,
 	SiTailwindcss,
 	SiRedux,
 	SiNodedotjs,
@@ -12,10 +12,10 @@ import {
 	SiPostgresql,
 	SiGit,
 	SiDocker,
-	SiAmazonwebservices,
 	SiPostman,
 	SiJira,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 function Background() {
 	// All skills combined for sliding animation with actual icons
@@ -23,7 +23,7 @@ function Background() {
 		{ name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
 		{ name: "React", Icon: SiReact, color: "#61DAFB" },
 		{ name: "HTML5", Icon: SiHtml5, color: "#E34F26" },
-		{ name: "CSS3", Icon: SiCss3, color: "#1572B6" },
+		{ name: "CSS3", Icon: SiCss, color: "#1572B6" },
 		{ name: "Tailwind", Icon: SiTailwindcss, color: "#06B6D4" },
 		{ name: "Redux", Icon: SiRedux, color: "#764ABC" },
 		{ name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
@@ -32,7 +32,7 @@ function Background() {
 		{ name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
 		{ name: "Git", Icon: SiGit, color: "#F05032" },
 		{ name: "Docker", Icon: SiDocker, color: "#2496ED" },
-		{ name: "AWS", Icon: SiAmazonwebservices, color: "#FF9900" },
+		{ name: "AWS", Icon: FaAws, color: "#FF9900" },
 		{ name: "Postman", Icon: SiPostman, color: "#FF6C37" },
 		{ name: "Jira", Icon: SiJira, color: "#0052CC" },
 	];
