@@ -23,8 +23,16 @@ import {
 	SiNumpy,
 	SiTensorflow,
 	SiAutocad,
+	SiHtml5,
+	SiCss,
+	SiTailwindcss,
+	SiRedux,
+	SiGit,
+	SiDocker,
+	SiJira,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
 
 function Profile() {
 	// All skills combined for sliding animation with actual icons
@@ -36,8 +44,14 @@ function Profile() {
 		{ name: "FastAPI", Icon: SiFastapi, color: "#009688" },
 		{ name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
 		{ name: "Express.js", Icon: SiExpress, color: "#888888" },
+		{ name: "REST API", Icon: TbApi, color: "#10B981" },
 		{ name: "React", Icon: SiReact, color: "#61DAFB" },
+		{ name: "Redux", Icon: SiRedux, color: "#764ABC" },
+		{ name: "HTML5", Icon: SiHtml5, color: "#E34F26" },
+		{ name: "CSS3", Icon: SiCss, color: "#1572B6" },
+		{ name: "Tailwind", Icon: SiTailwindcss, color: "#06B6D4" },
 		{ name: "AWS", Icon: FaAws, color: "#FF9900" },
+		{ name: "Docker", Icon: SiDocker, color: "#2496ED" },
 		{ name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
 		{ name: "MySQL", Icon: SiMysql, color: "#4479A1" },
 		{ name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
@@ -46,9 +60,11 @@ function Profile() {
 		{ name: "Celery", Icon: SiCelery, color: "#37814A" },
 		{ name: "Grafana", Icon: SiGrafana, color: "#F46800" },
 		{ name: "Superset", Icon: SiApachesuperset, color: "#20A6C9" },
+		{ name: "Git", Icon: SiGit, color: "#F05032" },
 		{ name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
 		{ name: "Linux", Icon: SiLinux, color: "#FCC624" },
 		{ name: "Postman", Icon: SiPostman, color: "#FF6C37" },
+		{ name: "Jira", Icon: SiJira, color: "#0052CC" },
 		{ name: "Pandas", Icon: SiPandas, color: "#E70488" },
 		{ name: "NumPy", Icon: SiNumpy, color: "#4DABCF" },
 		{ name: "TensorFlow", Icon: SiTensorflow, color: "#FF6F00" },
