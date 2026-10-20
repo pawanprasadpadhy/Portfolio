@@ -98,8 +98,10 @@ app.use("/api/auth", authRoutes);
 const contactRoutes = require("./routes/contactRoutes");
 app.use("/api/contact", contactRoutes);
 
+// "/api/notify" is the current path; "/api/track" is kept for cached copies
+// of the old frontend. Ad blockers often block URLs containing "track".
 const trackRoutes = require("./routes/trackRoutes");
-app.use("/api/track", trackRoutes);
+app.use(["/api/notify", "/api/track"], trackRoutes);
 
 // POST /api/contact - Submit contact form (Public)
 app.post("/api/contact", async (req, res) => {
